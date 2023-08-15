@@ -1,0 +1,22 @@
+<%= render 'books/list' %>
+<h1>Users</h1>
+   <table>
+    <tr>
+      <th>image</th>
+      <th>name</th>
+      <th></th>
+    </tr>
+    <% @users.each do |user|%>
+    <tr>
+       <td>
+         <% if user.profileimage.attached? %>
+           <%= image_tag user.profile_image, size: "200x200" %>
+         <% else %>
+           <%= image_tag 'no_image', size: "200x200" %>
+         <% end %>
+       </td>
+       <td><%= user.name %></td>
+       <td><%= link_to "Show", user_path(user.id) %></td>
+    </tr>
+      <% end %>
+ </table>

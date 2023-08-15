@@ -1,0 +1,18 @@
+<%= render 'books/list' %>
+<h1>Book detail</h1>
+    <%# @book.each do |book| %>
+       <image>
+        <% if @book.user.profileimage.attached? %>
+          <%= image_tag @book.user.profile_image, size: "200x200" %>
+        <% else %>
+          <%= image_tag 'no_image', size: "200x200" %>
+        <% end %>
+       </image>
+       <li><%= @book.title %></li>
+       <li><%= @book.body %></li>
+       <li><%= link_to "Edit",  edit_book_path %></li>
+       <li><%= link_to "Destroy", book_path(@book.id), method: :delete, "data-confirm" =>" 本当に消しますか？"%></li>
+       <li><%= link_to @book.user.name, user_path(@book.user_id) %></li>
+    <%# end %>
+    
+ 
