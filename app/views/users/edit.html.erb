@@ -1,15 +1,34 @@
+<div>
+  <%= flash[:notice] %>
+</div>
 <h1>User info</h1>
+<% if @user.errors.any? %>
+  <div id="error_explanation" data-turbo-cache="false">
+    <h2>
+      <%= I18n.t("errors.messages.not_saved",
+                 count: @user.errors.count,
+                 resource: @user.class.model_name.human.downcase)
+       %>
+    </h2>
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_with model: @user do |f| %>
 
   <h4>Name</h4>
   <%= f.text_field :name %>
-  
+
 	<h4>Image</h4>
-	<%= f.file_field :image, accept: "image/*" %>
-	
+	<%= f.file_field :profile_image, accept: "image/*" %>
+
   <h4>Introduction</h4>
-  
+
   <%= f.text_area :introduction %>
-	
+
   <%= f.submit 'Update User' %>
 <% end %>

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <script src="https://kit.fontawesome.com/651d9faaec.js" crossorigin="anonymous"></script>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/651d9faaec.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -18,7 +18,7 @@
       <% if user_signed_in? %>
         <li>
           <%= link_to(user_path(current_user.id) ) do %>
-            <i class = "fa-solid fa-house"></i>Home
+            <i class = "fa-solid fa-home"></i>Home
           <% end %>
         </li>
         <li>
@@ -27,23 +27,23 @@
           <% end %>
         </li>
         <li>
-          <%= link_to (books_path) do %> 
-            <i class="fa-solid fa-book-open"></i>Books 
+          <%= link_to (books_path) do %>
+            <i class="fa-solid fa-book-open"></i>Books
           <% end %>
         </li>
         <li>
-          <%= link_to (destroy_user_session_path), method: :delete do %> 
-            <i class="fa-solid fa-right-from-bracket"></i>Log out 
+          <%= link_to (destroy_user_session_path), method: :delete do %>
+            <i class="fa-solid fa-sign-out-alt"></i>Log out
           <% end %>
         </li>
       <% else %>
         <li>
-          <%= link_to (root_path) do %> 
-            <i class="fa-solid fa-house"></i>Home
+          <%= link_to (root_path) do %>
+            <i class="fa-solid fa-home"></i>Home
           <% end %>
         </li>
         <li>
-          <%= link_to (about_path) do %>
+          <%= link_to ('/home/about') do %>
             <i class="fa-solid fa-link"></i>About
           <% end %>
         </li>
@@ -54,7 +54,7 @@
         </li>
         <li>
           <%= link_to (new_user_session_path) do %>
-            <i class="fa-solid fa-right-to-bracket"></i>Log in
+            <i class="fa-solid fa-sign-in-alt"></i>Log in
           <% end %>
         </li>
       <% end %>
