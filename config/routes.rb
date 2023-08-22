@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :users do
   end
   resources :books do
+   resources :book_comments 
   end
 end

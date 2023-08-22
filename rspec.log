@@ -496,10 +496,10 @@ Failures:
 
   22) [STEP3] 仕上げのテスト サクセスメッセージのテスト ユーザログアウト成功時
       [31mFailure/Error: [0mis_expected.to have_content [31m[1;31m'[0m[31msuccessfully[1;31m'[0m[31m[0m[0m
-      [31m  expected to find text "successfully" in "Bookers\nHome Users Books Log out\nUser info\nname c3p2jsobnh introduction bplyxvxy95am3e1e9l88\nNew book\nTitle\nOpinion\nBooks\nTitle Opinion x6qxi gx0hox3bxjop6a0l904s ou4hb xng8kk13qg8krcsxznxb\nCopyRight Infratop.inc"[0m
+      [31m  expected to find text "successfully" in "Bookers\nHome Users Books Log out\nUser info\nname wkfk45uicc introduction vtr3yy17lrpc6h8mur3z\nNew book\nTitle\nOpinion\nBooks\nTitle Opinion th0xw 8lownjmudwevly3qhu9u 7mu5w zagcrva1ovph8srnh5je\nCopyRight Infratop.inc"[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:36:in `block (3 levels) in <main>'[0m
 
-Finished in 36.25 seconds (files took 1.9 seconds to load)
+Finished in 39.16 seconds (files took 4.55 seconds to load)
 [31m199 examples, 22 failures[0m
 
 Failed examples:
